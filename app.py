@@ -226,7 +226,7 @@ with p1_col1:
     st.markdown('<span class="badge">Django</span> <span class="badge">NLP (SBERT)</span> <span class="badge">spaCy</span>', unsafe_allow_html=True)
     st.write("A semantic search engine that scores resumes against Job Descriptions. Unlike simple keyword matchers, this understands context.")
     st.markdown("**Impact:** Automated PDF reporting and weighted ATS scoring.")
-    st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
+    st.link_button("View Code", "https://github.com/Legit18Im/AI-ATS-Resume-Scanner")
 with p1_col2:
     st.image("https://cdn-icons-png.flaticon.com/512/2910/2910791.png", width=120)
 st.markdown('</div>', unsafe_allow_html=True)
@@ -249,7 +249,7 @@ st.markdown('<div class="project-card">', unsafe_allow_html=True)
 st.subheader("3. Credit Risk Financial Model")
 st.markdown('<span class="badge">XGBoost</span> <span class="badge">Finance</span> <span class="badge">SQL</span>', unsafe_allow_html=True)
 st.write("Developed a statistical model at **Internship Studio** to predict loan defaults, significantly lowering financial risk.")
-st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
+st.link_button("View Code", "https://github.com/Legit18Im/Credit-Risk-Financial-Model/tree/main")
 st.markdown('</div>', unsafe_allow_html=True)
 
 st.write("---")
