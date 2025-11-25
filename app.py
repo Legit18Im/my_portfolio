@@ -124,7 +124,7 @@ with col2:
 
 st.write("---")
 
-# --- TECHNICAL SKILLS (Updated with Prompt Engineering) ---
+# --- TECHNICAL SKILLS ---
 st.header("🛠 Technical Proficiency")
 
 tab1, tab2, tab3 = st.tabs(["🔹 AI & Generative AI", "🔹 Data Engineering & Cloud", "🔹 Development & Tools"])
@@ -135,24 +135,24 @@ with tab1:
     - **Generative AI:** Prompt Engineering, LLM Integration, RAG (Retrieval-Augmented Generation)
     - **Deep Learning:** CNN, RNN, LSTM, Transfer Learning (ResNet, YOLO)
     - **NLP:** Transformers (BERT/SBERT), spaCy, Text Preprocessing, NER
-    - **Computer Vision:** OpenCV, Image Processing, Object Detection 
+    - **Computer Vision:** OpenCV, Image Processing, Object Detection
     """)
 
 with tab2:
     st.subheader("Big Data & Cloud")
     st.markdown("""
-    - **Cloud Platforms:** Microsoft Azure ML, AWS (Basics) 
+    - **Cloud Platforms:** Microsoft Azure ML, AWS (Basics)
     - **Big Data:** Apache Spark (PySpark), Hadoop Ecosystem, Hive
-    - **Pipelines:** ETL Processes, Data Integration, CI/CD Pipelines 
-    - **Databases:** SQL (PostgreSQL, MySQL), NoSQL Basics 
+    - **Pipelines:** ETL Processes, Data Integration, CI/CD Pipelines
+    - **Databases:** SQL (PostgreSQL, MySQL), NoSQL Basics
     """)
 
 with tab3:
     st.subheader("Development")
     st.markdown("""
-    - **Languages:** Python (Advanced), SQL, C++(Basics)
-    - **Web Frameworks:** Flask, Django, Streamlit, FastAPI 
-    - **Tools:** Docker, Git/GitHub, VS Code, Jupyter,Colab, Power BI 
+    - **Languages:** Python (Advanced), SQL, C++
+    - **Web Frameworks:** Flask, Django, Streamlit, FastAPI
+    - **Tools:** Docker, Git/GitHub, VS Code, Jupyter, Power BI
     - **AI Workflow:** AI-Assisted Coding, Rapid Prototyping
     """)
 
@@ -261,14 +261,14 @@ c1, c2 = st.columns(2)
 with c1:
     st.subheader("Education")
     st.markdown("**B.E. Computer Science** | VTU (2021-2024)")
-    st.success("Result: Grade A (7.3 CGPA)")
+    st.success("Result: Grade A")
     st.markdown("**B.E. Computer Science** | Maratha Mandal (2020-2024)")
-    st.info("Result: Grade 7.5 CGPA")
+    st.info("Result: Grade 7.5")
 with c2:
     st.subheader("Certifications")
     st.markdown("✅ **Certified Data Scientist** (Internship Studio)")
     st.markdown("✅ **Data Science Training** (NullClass)")
-    st.markdown("✅ **Data Analysis with Python** (Cognitive Class) ")
+    st.markdown("✅ **Data Analysis with Python** (Cognitive Class)")
 
 # --- FOOTER ---
 st.write("---")
