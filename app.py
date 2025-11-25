@@ -272,7 +272,7 @@ with c2:
 
 # --- FOOTER ---
 st.write("---")
-st.caption("🚀 Portfolio built with Python, Streamlit, and Prompt Engineering.")
+
 st.header("📬 Get in Touch")
 st.write("Open to Full-Time Roles. Let's Connect!")
 st.markdown("[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jay-shahapurakar) &nbsp; [![Email](https://img.shields.io/badge/Email-Me-red?style=for-the-badge&logo=gmail)](mailto:jayshahapurakar@gmail.com)")
