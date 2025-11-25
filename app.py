@@ -24,69 +24,58 @@ def load_lottieurl(url):
 lottie_hero = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 lottie_contact = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_u25cckyh.json")
 
-# --- CUSTOM CSS ANIMATIONS ---
+# --- CUSTOM CSS ---
 st.markdown("""
 <style>
-    /* 1. Global Font */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     html, body, [class*="css"] {
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
     }
-
-    /* 2. Fade In Animation for the whole page */
+    
+    /* Fade In Animation */
     @keyframes fadeIn {
         0% { opacity: 0; transform: translateY(20px); }
         100% { opacity: 1; transform: translateY(0); }
     }
-    .main {
-        animation: fadeIn 1s ease-in-out;
-    }
+    .main { animation: fadeIn 0.8s ease-in-out; }
 
-    /* 3. Card Styling with Hover Animation */
-    .stExpander {
-        border: none !important;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-        border-radius: 10px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .stExpander:hover {
-        transform: scale(1.01);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    /* 4. Project Cards Styling */
+    /* Project Cards */
     .project-card {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 25px;
         border-radius: 15px;
         border-left: 5px solid #2E86C1;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        margin-bottom: 25px;
         transition: transform 0.3s ease;
-        margin-bottom: 20px;
     }
-    .project-card:hover {
-        transform: translateY(-5px);
-    }
+    .project-card:hover { transform: translateY(-5px); }
 
-    /* 5. Badges */
+    /* Badges */
     .badge {
         background-color: #e3f2fd;
         color: #1565c0;
         padding: 5px 12px;
         border-radius: 15px;
-        font-size: 0.85em;
+        font-size: 0.8em;
         font-weight: 600;
         margin-right: 5px;
         display: inline-block;
         border: 1px solid #bbdefb;
     }
+    
+    .stButton>button {
+        width: 100%;
+        border-radius: 8px;
+        font-weight: 600;
+        border: 1px solid #2E86C1;
+    }
 </style>
 """, unsafe_allow_html=True)
 
-# --- SIDEBAR (Static Profile Info) ---
+# --- SIDEBAR ---
 with st.sidebar:
-    # Profile Pic
     try:
         image = Image.open("profile-pic.png")
         st.image(image, width=150)
@@ -96,126 +85,125 @@ with st.sidebar:
     st.markdown("### Jay Shahapurakar")
     st.markdown("**AI Engineer @ Trainee**")
     st.caption("📍 Belgaum, Karnataka, India")
-    
     st.markdown("---")
     
-    # Social Icons
     st.markdown("""
     <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-        <a href="https://www.linkedin.com/in/jay-shahapurakar" target="_blank">
-            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="100" />
-        </a>
-        <a href="https://github.com/Legit18Im/Jay-Shahapurakar" target="_blank">
-            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="90" />
-        </a>
+        <a href="https://www.linkedin.com/in/jay-shahapurakar" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="100" /></a>
+        <a href="https://github.com/Legit18Im/Jay-Shahapurakar" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" width="90" /></a>
     </div>
     """, unsafe_allow_html=True)
     
-    # Download Resume
     try:
         with open("resume.pdf", "rb") as pdf_file:
             pdf_bytes = pdf_file.read()
-        st.download_button(
-            label="📄 Download Resume PDF",
-            data=pdf_bytes,
-            file_name="Jay_Shahapurakar_Resume.pdf",
-            mime="application/pdf"
-        )
-    except FileNotFoundError:
+        st.download_button(label="📄 Download Resume PDF", data=pdf_bytes, file_name="Jay_Shahapurakar_Resume.pdf", mime="application/pdf")
+    except:
         st.warning("⚠️ resume.pdf not found")
 
     st.markdown("---")
-    st.info("ℹ️ **Navigation:** Scroll down to see my Projects, Experience, and Skills.")
+    st.info("Scroll down to explore my portfolio.")
 
-# ==========================================
-# SECTIONS START HERE (Vertical Flow)
-# ==========================================
-
-# --- 1. HERO SECTION ---
+# --- HERO SECTION ---
 col1, col2 = st.columns([1.5, 1])
 with col1:
     st.title("Jay Shahapurakar")
-    st.markdown("#### 🚀 Building Intelligent Systems with AI & Deep Learning")
+    st.markdown("#### 🚀 Transforming Data into Intelligent Systems")
     st.write("""
-    I am an **AI Engineer** specializing in **Computer Vision** and **Predictive Modeling**. 
-    My work bridges the gap between raw data and actionable business insights, utilizing modern pipelines like **CI/CD**, **Azure ML**, and **GPU Acceleration**.
+    I am an **AI Engineer** with deep expertise in **Computer Vision**, **NLP**, and **Data Engineering**. 
+    I specialize in building production-ready ML pipelines, optimizing GPU inference, and deploying scalable AI solutions on Azure/AWS.
     """)
     st.markdown("---")
-    # Quick Stats
     c1, c2, c3 = st.columns(3)
-    with c1:
-        st.metric(label="Experience", value="4+ Roles")
-    with c2:
-        st.metric(label="Projects", value="Full Stack AI")
-    with c3:
-        st.metric(label="Top Grade", value="Grade A (VTU)")
-    
-    st.info("💡 **Open to Work:** Data Scientist, ML Engineer, AI Engineer.")
+    with c1: st.metric("Experience", "4+ Roles")
+    with c2: st.metric("Projects", "Full Stack AI")
+    with c3: st.metric("Education", "Grade A (VTU)")
 
 with col2:
-    if lottie_hero:
-        st_lottie(lottie_hero, height=350)
+    if lottie_hero: st_lottie(lottie_hero, height=320)
 
 st.write("---")
 
-# --- 2. SKILLS & TECH STACK ---
+# --- TECHNICAL SKILLS (Expanded) ---
 st.header("🛠 Technical Proficiency")
-st.markdown("My toolkit for building scalable AI solutions.")
 
-sc1, sc2 = st.columns(2)
-with sc1:
-    st.subheader("Languages & Tools")
-    st.markdown("![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)")
-    st.markdown("![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)")
-    st.markdown("![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)")
-    st.markdown("![Azure](https://img.shields.io/badge/Azure%20ML-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)")
-    
-with sc2:
-    st.subheader("AI Frameworks")
-    st.markdown("![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)")
-    st.markdown("![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)")
-    st.markdown("![Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=white)")
+tab1, tab2, tab3 = st.tabs(["🔹 AI & Data Science", "🔹 Data Engineering & Cloud", "🔹 Programming & Tools"])
+
+with tab1:
+    st.subheader("Artificial Intelligence")
+    st.markdown("""
+    - **Deep Learning:** CNN, RNN, LSTM, Transfer Learning (ResNet, YOLO)
+    - **NLP:** Transformers (BERT/SBERT), spaCy, Text Preprocessing, Named Entity Recognition (NER)
+    - **Machine Learning:** XGBoost, Random Forest, Scikit-Learn, Predictive Modeling
+    - **Computer Vision:** OpenCV, Image Processing, Object Detection
+    """)
+
+with tab2:
+    st.subheader("Big Data & Cloud")
+    st.markdown("""
+    - **Cloud Platforms:** Microsoft Azure ML, AWS (Basics)
+    - **Big Data:** Apache Spark (PySpark), Hadoop Ecosystem, Hive
+    - **Pipelines:** ETL Processes, Data Integration, CI/CD Pipelines
+    - **Databases:** SQL (PostgreSQL, MySQL), NoSQL Basics
+    """)
+
+with tab3:
+    st.subheader("Development")
+    st.markdown("""
+    - **Languages:** Python (Advanced), SQL, C++
+    - **Web Frameworks:** Flask, Django, Streamlit, FastAPI
+    - **Tools:** Docker, Git/GitHub, VS Code, Jupyter, Power BI
+    - **Concepts:** SDLC, Code Review, Data Quality, Algorithm Optimization
+    """)
 
 st.write("---")
 
-# --- 3. EXPERIENCE TIMELINE ---
+# --- PROFESSIONAL EXPERIENCE ---
 st.header("🚀 Professional Experience")
-st.write("A chronological view of my career journey.")
 
-# 1. GTechnoHubb
 with st.expander("📍 **AI Engineer | GTechnoHubb Solutions** (Apr 2025 - Present)", expanded=True):
     st.write("**Bengaluru, Karnataka**")
-    st.markdown("- Building and deploying **production-grade ML/DL models**.")
-    st.markdown("- Designing end-to-end ML pipelines covering preprocessing, training, and evaluation.")
-    st.markdown("- Implementing real-time inference systems using Flask.")
+    st.markdown("""
+    - 🛠 **End-to-End Development:** Designing and deploying production-grade ML/DL models.
+    - 🚀 **Pipeline Optimization:** Implementing real-time inference pipelines using **Flask** and **Docker**.
+    - 📊 **Model Monitoring:** ensuring high availability and accuracy of deployed models.
+    """)
 
-# 2. Labmentix
 with st.expander("📍 **Data Analyst Intern | Labmentix** (Mar 2025 - Apr 2025)", expanded=True):
-    st.write("**Bengaluru, Karnataka / Remote**")
-    st.markdown("- Worked on large-scale **Data Integration** and analysis.")
-    st.markdown("- Utilized **Convolutional Neural Networks (CNN)** for image data processing.")
+    st.write("**Bengaluru / Remote**")
+    st.markdown("""
+    - 🔍 **Large-Scale Analysis:** Performed data integration and quality checks on complex datasets.
+    - 🖼 **Computer Vision:** Applied **Convolutional Neural Networks (CNN)** for image classification tasks.
+    - 📈 **Optimization:** Assisted in optimizing SQL queries for faster analytics dashboards.
+    """)
 
-# 3. NullClass
 with st.expander("📍 **Data Science Intern | NullClass** (Dec 2024 - Mar 2025)"):
     st.write("**Dharmapuri, Tamil Nadu**")
-    st.markdown("- Specialized in **Deep Learning** and **GPU Computing**.")
-    st.markdown("- Built pipelines using **PySpark** and performed advanced Feature Engineering.")
+    st.markdown("""
+    - ⚡ **GPU Computing:** Utilized GPU acceleration for training Deep Learning models.
+    - 🛠 **Feature Engineering:** Developed robust pipelines using **PySpark** for big data processing.
+    - 🎯 **Impact:** Instrumental in enhancing model accuracy through hyperparameter tuning.
+    """)
 
-# 4. Internship Studio
 with st.expander("📍 **Data Scientist | Internship Studio** (Aug 2024 - Nov 2024)"):
     st.write("**Pune, Maharashtra**")
-    st.markdown("- Developed **Financial Risk Models** using Statistical Modeling.")
-    st.markdown("- Managed databases using **SQL** and optimized data queries.")
+    st.markdown("""
+    - [cite_start]💳 **Risk Modeling:** Developed a **Financial Risk Model** that lowers default rates for credit institutions[cite: 80].
+    - 📉 **Statistical Analysis:** Applied advanced statistical methods to identify key risk indicators.
+    - 🗄 **Data Management:** Managed large financial datasets using SQL and Pandas.
+    """)
 
-# 5. Eysec
-with st.expander("📍 **Machine Learning Intern | Eysec Cyber Security** (Aug 2023 - Sep 2023)"):
+with st.expander("📍 **ML Intern | Eysec Cyber Security** (Aug 2023 - Sep 2023)"):
     st.write("**Belgaum**")
-    st.markdown("- Improved model accuracy from **80% to 87.58%**.")
-    st.markdown("- Performed EDA to identify security threats.")
+    st.markdown("""
+    - 🛡 **Security AI:** Applied ML to identify patterns in security threat data.
+    - [cite_start]📈 **Performance Boost:** Tuned models to improve accuracy from **80% to 87.58%**[cite: 102].
+    - 🔍 **EDA:** Performed rigorous Exploratory Data Analysis to clean and prep security logs.
+    """)
 
 st.write("---")
 
-# --- 4. FEATURED PROJECTS ---
+# --- FEATURED PROJECTS (Detailed) ---
 st.header("💻 Featured Projects")
 
 # Project 1
@@ -223,10 +211,14 @@ st.markdown('<div class="project-card">', unsafe_allow_html=True)
 p1_col1, p1_col2 = st.columns([3, 1])
 with p1_col1:
     st.subheader("1. AI ATS Resume Scanner & Ranker")
-    st.markdown('<span class="badge">Django</span> <span class="badge">NLP (SBERT)</span> <span class="badge">spaCy</span>', unsafe_allow_html=True)
-    st.write("A semantic search engine that scores resumes against Job Descriptions. Unlike simple keyword matchers, this understands context.")
-    st.markdown("**Impact:** Automated PDF reporting and weighted ATS scoring.")
-    st.link_button("View Code", "https://github.com/Legit18Im/AI-ATS-Resume-Scanner")
+    st.markdown('<span class="badge">Django</span> <span class="badge">SBERT</span> <span class="badge">Named Entity Recognition</span>', unsafe_allow_html=True)
+    st.write("A semantic search engine designed to solve the 'Keyword Stuffing' problem in recruitment.")
+    st.markdown("""
+    - **Semantic Matching:** Uses **Cosine Similarity** on SBERT vectors to understand context, not just keywords.
+    - **Entity Extraction:** Implemented **NER (spaCy)** to automatically extract Skills, Education, and Experience.
+    - **Full-Stack:** Built with Django and generates automated PDF compatibility reports.
+    """)
+    st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
 with p1_col2:
     st.image("https://cdn-icons-png.flaticon.com/512/2910/2910791.png", width=120)
 st.markdown('</div>', unsafe_allow_html=True)
@@ -236,9 +228,13 @@ st.markdown('<div class="project-card">', unsafe_allow_html=True)
 p2_col1, p2_col2 = st.columns([3, 1])
 with p2_col1:
     st.subheader("2. Video Anomaly Detection (CCTV)")
-    st.markdown('<span class="badge">Computer Vision</span> <span class="badge">CNN+LSTM</span> <span class="badge">OpenCV</span>', unsafe_allow_html=True)
-    st.write("Real-time detection of fire, accidents, and robbery. Optimized for GPU inference.")
-    st.markdown("**Impact:** 92% Accuracy with 15% efficiency gain via frame-skipping.")
+    st.markdown('<span class="badge">Computer Vision</span> <span class="badge">ConvLSTM</span> <span class="badge">Real-time Inference</span>', unsafe_allow_html=True)
+    st.write("An automated surveillance system to detect accidents, fire, and robbery in real-time video feeds.")
+    st.markdown("""
+    - **Architecture:** Utilized **ConvLSTM** to capture both spatial (image) and temporal (time) dependencies.
+    - **Optimization:** Implemented frame-skipping techniques to improve processing speed by **15%**.
+    - **Accuracy:** Achieved **92% accuracy** with reduced false positives in varying lighting conditions.
+    """)
     st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
 with p2_col2:
     st.image("https://cdn-icons-png.flaticon.com/512/3067/3067303.png", width=120)
@@ -247,57 +243,35 @@ st.markdown('</div>', unsafe_allow_html=True)
 # Project 3
 st.markdown('<div class="project-card">', unsafe_allow_html=True)
 st.subheader("3. Credit Risk Financial Model")
-st.markdown('<span class="badge">XGBoost</span> <span class="badge">Finance</span> <span class="badge">SQL</span>', unsafe_allow_html=True)
-st.write("Developed a statistical model at **Internship Studio** to predict loan defaults, significantly lowering financial risk.")
-st.link_button("View Code", "https://github.com/Legit18Im/Credit-Risk-Financial-Model/tree/main")
+st.markdown('<span class="badge">XGBoost</span> <span class="badge">SMOTE</span> <span class="badge">Statistical Modeling</span>', unsafe_allow_html=True)
+st.write("A robust classification system to predict potential credit card defaulters.")
+st.markdown("""
+    - **Class Imbalance:** Handled skewed datasets using **SMOTE (Synthetic Minority Over-sampling Technique)**.
+    - **Feature Engineering:** Analyzed demographic and behavioral data to identify key risk factors.
+    - [cite_start]**Performance:** Optimized **ROC-AUC Score** to minimize financial risk for lenders[cite: 80].
+    """)
+st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
 st.markdown('</div>', unsafe_allow_html=True)
 
 st.write("---")
 
-# --- 5. EDUCATION & CERTS ---
+# --- EDUCATION ---
 st.header("🎓 Education & Certifications")
-e_col1, e_col2 = st.columns(2)
-
-with e_col1:
+c1, c2 = st.columns(2)
+with c1:
     st.subheader("Education")
-    st.markdown("**B.E. Computer Science**")
-    st.write("Visvesvaraya Technological University")
-    st.write("📅 2021 - 2024")
+    st.markdown("**B.E. Computer Science** | VTU (2021-2024)")
     st.success("Result: Grade A")
-    
-    st.markdown("**B.E. Computer Science**")
-    st.write("Maratha Mandal Engineering College")
-    st.write("📅 2020 - 2024")
+    st.markdown("**B.E. Computer Science** | Maratha Mandal (2020-2024)")
     st.info("Result: Grade 7.5")
-
-with e_col2:
+with c2:
     st.subheader("Certifications")
-    st.info("✅ **Data Science Training** (NullClass)")
-    st.info("✅ **Certified Data Scientist** (Internship Studio)")
-    st.info("✅ **Data Analysis with Python** (Cognitive Class)")
+    st.markdown("✅ **Certified Data Scientist** (Internship Studio)")
+    st.markdown("✅ **Data Science Training** (NullClass)")
+    st.markdown("✅ **Data Analysis with Python** (Cognitive Class)")
 
+# --- CONTACT ---
 st.write("---")
-
-# --- 6. CONTACT FOOTER ---
 st.header("📬 Get in Touch")
-contact_col1, contact_col2 = st.columns([2, 1])
-
-with contact_col1:
-    st.write("I am open to full-time opportunities in Data Science & AI. Feel free to reach out!")
-    st.markdown("**📧 Email:** jayshahapurakar@gmail.com")
-    
-    st.write("OR Send a message directly:")
-    contact_form = """
-    <form action="https://formsubmit.co/jayshahapurakar@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
-        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
-        <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-        <button type="submit" style="background-color: #2E86C1; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
-    </form>
-    """
-    st.markdown(contact_form, unsafe_allow_html=True)
-
-with contact_col2:
-    if lottie_contact:
-        st_lottie(lottie_contact, height=250)
+st.write("Open to Full-Time Roles. Let's Connect!")
+st.markdown("[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jay-shahapurakar) &nbsp; [![Email](https://img.shields.io/badge/Email-Me-red?style=for-the-badge&logo=gmail)](mailto:jayshahapurakar@gmail.com)")
