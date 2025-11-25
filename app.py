@@ -135,24 +135,24 @@ with tab1:
     - **Generative AI:** Prompt Engineering, LLM Integration, RAG (Retrieval-Augmented Generation)
     - **Deep Learning:** CNN, RNN, LSTM, Transfer Learning (ResNet, YOLO)
     - **NLP:** Transformers (BERT/SBERT), spaCy, Text Preprocessing, NER
-    - **Computer Vision:** OpenCV, Image Processing, Object Detection [cite: 7]
+    - **Computer Vision:** OpenCV, Image Processing, Object Detection 
     """)
 
 with tab2:
     st.subheader("Big Data & Cloud")
     st.markdown("""
-    - **Cloud Platforms:** Microsoft Azure ML, AWS (Basics) [cite: 58]
+    - **Cloud Platforms:** Microsoft Azure ML, AWS (Basics) 
     - **Big Data:** Apache Spark (PySpark), Hadoop Ecosystem, Hive
-    - **Pipelines:** ETL Processes, Data Integration, CI/CD Pipelines [cite: 5]
-    - **Databases:** SQL (PostgreSQL, MySQL), NoSQL Basics [cite: 58]
+    - **Pipelines:** ETL Processes, Data Integration, CI/CD Pipelines 
+    - **Databases:** SQL (PostgreSQL, MySQL), NoSQL Basics 
     """)
 
 with tab3:
     st.subheader("Development")
     st.markdown("""
-    - **Languages:** Python (Advanced), SQL, C++ [cite: 58]
-    - **Web Frameworks:** Flask, Django, Streamlit, FastAPI [cite: 58]
-    - **Tools:** Docker, Git/GitHub, VS Code, Jupyter, Power BI [cite: 58]
+    - **Languages:** Python (Advanced), SQL, C++(Basics)
+    - **Web Frameworks:** Flask, Django, Streamlit, FastAPI 
+    - **Tools:** Docker, Git/GitHub, VS Code, Jupyter,Colab, Power BI 
     - **AI Workflow:** AI-Assisted Coding, Rapid Prototyping
     """)
 
@@ -164,15 +164,15 @@ st.header("🚀 Professional Experience")
 with st.expander("📍 **AI Engineer | GTechnoHubb Solutions** (Apr 2025 - Present)", expanded=True):
     st.write("**Bengaluru, Karnataka**")
     st.markdown("""
-    - 🛠 **End-to-End Development:** Designing and deploying production-grade ML/DL models[cite: 62].
-    - 🚀 **Pipeline Optimization:** Implementing real-time inference pipelines using **Flask** and **Docker**[cite: 63].
-    - 📊 **Model Monitoring:** Collaborating with cross-functional teams to improve model accuracy[cite: 64].
+    - 🛠 **End-to-End Development:** Designing and deploying production-grade ML/DL models.
+    - 🚀 **Pipeline Optimization:** Implementing real-time inference pipelines using **Flask** and **Docker**.
+    - 📊 **Model Monitoring:** Collaborating with cross-functional teams to improve model accuracy.
     """)
 
 with st.expander("📍 **Data Analyst Intern | Labmentix** (Mar 2025 - Apr 2025)", expanded=True):
     st.write("**Bengaluru / Remote**")
     st.markdown("""
-    - 🔍 **Large-Scale Analysis:** Performed data integration and quality checks on complex datasets[cite: 20, 21].
+    - 🔍 **Large-Scale Analysis:** Performed data integration and quality checks on complex datasets.
     - 🖼 **Computer Vision:** Applied **Convolutional Neural Networks (CNN)** for image classification tasks.
     - 📈 **Optimization:** Assisted in optimizing SQL queries for faster analytics dashboards.
     """)
@@ -180,15 +180,15 @@ with st.expander("📍 **Data Analyst Intern | Labmentix** (Mar 2025 - Apr 2025)
 with st.expander("📍 **Data Science Intern | NullClass** (Dec 2024 - Mar 2025)"):
     st.write("**Dharmapuri, Tamil Nadu**")
     st.markdown("""
-    - ⚡ **GPU Computing:** Utilized GPU acceleration for training Deep Learning models[cite: 5].
-    - 🛠 **Feature Engineering:** Developed robust pipelines using **PySpark** for big data processing[cite: 15].
+    - ⚡ **GPU Computing:** Utilized GPU acceleration for training Deep Learning models.
+    - 🛠 **Feature Engineering:** Developed robust pipelines using **PySpark** for big data processing.
     - 🎯 **Impact:** Instrumental in enhancing model accuracy through hyperparameter tuning.
     """)
 
 with st.expander("📍 **Data Scientist | Internship Studio** (Aug 2024 - Nov 2024)"):
     st.write("**Pune, Maharashtra**")
     st.markdown("""
-    - 💳 **Risk Modeling:** Developed a **Financial Risk Model** that lowers default rates for credit institutions[cite: 16].
+    - 💳 **Risk Modeling:** Developed a **Financial Risk Model** that lowers default rates for credit institutions.
     - 📉 **Statistical Analysis:** Applied advanced statistical methods to identify key risk indicators.
     - 🗄 **Data Management:** Managed large financial datasets using SQL and Pandas.
     """)
@@ -196,9 +196,9 @@ with st.expander("📍 **Data Scientist | Internship Studio** (Aug 2024 - Nov 20
 with st.expander("📍 **ML Intern | Eysec Cyber Security** (Aug 2023 - Sep 2023)"):
     st.write("**Belgaum**")
     st.markdown("""
-    - 🛡 **Security AI:** Applied ML to identify patterns in security threat data[cite: 33].
-    - 📈 **Performance Boost:** Tuned models to improve accuracy from **80% to 87.58%**[cite: 38].
-    - 🔍 **EDA:** Performed rigorous Exploratory Data Analysis to clean and prep security logs[cite: 33].
+    - 🛡 **Security AI:** Applied ML to identify patterns in security threat data.
+    - 📈 **Performance Boost:** Tuned models to improve accuracy from **80% to 87.58%**.
+    - 🔍 **EDA:** Performed rigorous Exploratory Data Analysis to clean and prep security logs.
     """)
 
 st.write("---")
@@ -214,9 +214,9 @@ with p1_col1:
     st.markdown('<span class="badge">Django</span> <span class="badge">SBERT</span> <span class="badge">Named Entity Recognition</span>', unsafe_allow_html=True)
     st.write("A semantic search engine designed to solve the 'Keyword Stuffing' problem in recruitment.")
     st.markdown("""
-    - **Semantic Matching:** Uses **Cosine Similarity** on SBERT vectors to understand context, not just keywords[cite: 80].
-    - **Entity Extraction:** Implemented **NER (spaCy)** to automatically extract Skills, Education, and Experience[cite: 81].
-    - **Full-Stack:** Built with Django and generates automated PDF compatibility reports[cite: 83].
+    - **Semantic Matching:** Uses **Cosine Similarity** on SBERT vectors to understand context, not just keywords.
+    - **Entity Extraction:** Implemented **NER (spaCy)** to automatically extract Skills, Education, and Experience.
+    - **Full-Stack:** Built with Django and generates automated PDF compatibility reports.
     """)
     st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
 with p1_col2:
@@ -231,9 +231,9 @@ with p2_col1:
     st.markdown('<span class="badge">Computer Vision</span> <span class="badge">ConvLSTM</span> <span class="badge">Real-time Inference</span>', unsafe_allow_html=True)
     st.write("An automated surveillance system to detect accidents, fire, and robbery in real-time video feeds.")
     st.markdown("""
-    - **Architecture:** Utilized **ConvLSTM** to capture both spatial (image) and temporal (time) dependencies[cite: 90].
-    - **Optimization:** Implemented frame-skipping techniques to improve processing speed by **15%**[cite: 92].
-    - **Accuracy:** Achieved **92% accuracy** with reduced false positives in varying lighting conditions[cite: 91].
+    - **Architecture:** Utilized **ConvLSTM** to capture both spatial (image) and temporal (time) dependencies.
+    - **Optimization:** Implemented frame-skipping techniques to improve processing speed by **15%**.
+    - **Accuracy:** Achieved **92% accuracy** with reduced false positives in varying lighting conditions.
     """)
     st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
 with p2_col2:
@@ -247,8 +247,8 @@ st.markdown('<span class="badge">XGBoost</span> <span class="badge">SMOTE</span>
 st.write("A robust classification system to predict potential credit card defaulters.")
 st.markdown("""
     - **Class Imbalance:** Handled skewed datasets using **SMOTE (Synthetic Minority Over-sampling Technique)**.
-    - **Feature Engineering:** Analyzed demographic and behavioral data to identify key risk factors[cite: 86].
-    - **Performance:** Optimized **ROC-AUC Score** to minimize financial risk for lenders[cite: 85].
+    - **Feature Engineering:** Analyzed demographic and behavioral data to identify key risk factors.
+    - **Performance:** Optimized **ROC-AUC Score** to minimize financial risk for lenders.
     """)
 st.link_button("View Code", "https://github.com/Legit18Im/Jay-Shahapurakar")
 st.markdown('</div>', unsafe_allow_html=True)
@@ -266,9 +266,9 @@ with c1:
     st.info("Result: Grade 7.5 [cite: 42, 43]")
 with c2:
     st.subheader("Certifications")
-    st.markdown("✅ **Certified Data Scientist** (Internship Studio) [cite: 7]")
-    st.markdown("✅ **Data Science Training** (NullClass) [cite: 8]")
-    st.markdown("✅ **Data Analysis with Python** (Cognitive Class) [cite: 9]")
+    st.markdown("✅ **Certified Data Scientist** (Internship Studio)")
+    st.markdown("✅ **Data Science Training** (NullClass)")
+    st.markdown("✅ **Data Analysis with Python** (Cognitive Class) ")
 
 # --- FOOTER ---
 st.write("---")
