@@ -261,9 +261,9 @@ c1, c2 = st.columns(2)
 with c1:
     st.subheader("Education")
     st.markdown("**B.E. Computer Science** | VTU (2021-2024)")
-    st.success("Result: Grade A [cite: 41]")
+    st.success("Result: Grade A (7.3 CGPA)")
     st.markdown("**B.E. Computer Science** | Maratha Mandal (2020-2024)")
-    st.info("Result: Grade 7.5 [cite: 42, 43]")
+    st.info("Result: Grade 7.5 CGPA")
 with c2:
     st.subheader("Certifications")
     st.markdown("✅ **Certified Data Scientist** (Internship Studio)")
